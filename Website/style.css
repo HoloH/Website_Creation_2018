@@ -13,18 +13,16 @@ body {
 }
 
 .top{
+    height: 360px;
     text-align: center;
+    background-image: url(./FullSizeRender.jpg);
+    height: 360px;
+    width: 100%;
 }
 
 .img-fluid {
     max-width: 100%;
     height: auto;
-}
-
-.header {
-    background-image: url(./FullSizeRender.jpg);
-    height: 360px;
-    width: 100%;
 }
 
 .button {
