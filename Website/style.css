@@ -14,4 +14,12 @@ body {
 
 .header {
     background-image: url(./FullSizeRender.jpg);
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    text-align: center;
+    enable-background: 10px;
+    opacity: 0.8;
 }
