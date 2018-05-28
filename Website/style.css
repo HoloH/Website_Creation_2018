@@ -12,6 +12,10 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.top{
+    text-align: center;
+}
+
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -23,7 +27,8 @@ body {
     width: 100%;
 }
 
-button {
+.button {
+    align-content: center;
     text-align: center;
     enable-background: 10px;
     opacity: 0.8;
