@@ -40,7 +40,7 @@ body {
   }
 
 .container {
-    align-content: center;
+    align-items: center;
     text-align: center;
     background-color:rgb(172, 171, 171);
     opacity: 0.8;
