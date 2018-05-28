@@ -34,23 +34,6 @@ body {
     margin-bottom: 30px;
   }
 
-/*.top{
-    height: 360px;
-    text-align: center;
-    background-image: url(./FullSizeRender.jpg);
-    height: 360px;
-    width: 100%;
-    color: white;
+.container {
+    text-align:center;
 }
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-.btn {
-    align-content: center;
-    text-align: center;
-    enable-background: 10px;
-    opacity: 0.8;
-}*/
