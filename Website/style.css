@@ -39,13 +39,13 @@ body {
     margin-bottom: 30px;
   }
 
-.container {
+/*.container {
     align-items: center;
     text-align: center;
     background-color:rgb(172, 171, 171);
     opacity: 0.8;
     margin: 5px 5px 5px 5px; 
-}
+}*/
 
 .banner-btn {
     color: #193f60;
