@@ -11,7 +11,54 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Share your favourite hikes on The HikeExchange</h1>
+
+    <form>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Area</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+            <option>Paris-region</option>
+            <option>Marseille-region</option>
+            <option>Lyon-region</option>
+            <option>Toulouse-region</option>
+            <option>Nice-region</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Time duration</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>< 1 hour</option>
+                <option>1-2 hour(s)</option>
+                <option>2-3 hours</option>
+                <option>3-5 hours</option>
+                <option>Daytrip (>5 hours)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Diccifulty level</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Give a short description of your hike</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
