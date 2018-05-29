@@ -48,5 +48,6 @@ body {
 }
 
 .banner-btn {
-    color: rgb(255, 255, 255);
+    color: rgb(176, 195, 205);
+    text-decoration-color: rgb(152, 168, 177);
 }
