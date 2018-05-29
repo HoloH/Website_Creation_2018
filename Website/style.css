@@ -104,7 +104,7 @@ body {
 .thankYouBody {
     background-color: #e7e8e8;
 }
-  .thankYouBody h1{
+.thankYouBody h1{
     margin-bottom: 20px;
 }
 
@@ -126,5 +126,19 @@ background-color: #193f60;
     opacity: 0.6;
     margin-bottom: 5px;
     margin-top: 5px;
+    margin-left: 2px;
     text-decoration-color: rgb(112, 111, 111);
+}
+
+.navigationBar a {
+    color:rgb(112, 111, 111);
+}
+
+.navigationBar a:visited {
+    color:rgb(112, 111, 111);
+}
+
+.navigationBar a:hover {
+    color:rgb(112, 111, 111);
+    text-decoration: none;
 }
