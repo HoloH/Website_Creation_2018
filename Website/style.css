@@ -59,6 +59,10 @@ body {
 
 
 /* share_hike_form */
+.bodyShareHike {
+    background-color: beige;
+}
+
 .shareHeader {
     color: white;
     text-align: center;
