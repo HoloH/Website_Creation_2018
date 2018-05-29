@@ -59,7 +59,7 @@ body {
 
 
 /* share_hike_form */
-.shareBanner {
+.shareHeader {
     color: white;
     text-align: center;
     height: 100vh;
@@ -70,13 +70,13 @@ body {
     justify-content: center;
 }
 
-.shareBanner h1 {
+.shareHeader h1 {
     font-size: 50px;
     font-weight: bold;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   }
 
-  .shareBanner p {
+  .shareHeader p {
     font-size: 25px;
     font-weight: lighter;
     color: rgb(255, 255, 255);
