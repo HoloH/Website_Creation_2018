@@ -48,6 +48,11 @@ body {
 }
 
 .banner-btn {
+    color: #193f60;
+    border-color: #193f60;
+}
+
+.banner-btn:hover {
     color: rgb(176, 195, 205);
-    text-decoration-color: rgb(152, 168, 177);
+    background-color: #193f60;
 }
