@@ -100,8 +100,12 @@ body {
   }
 
   /*Thank you for sharing your hike page*/
-.thankYouBody h1{
-    margin-bottom: 10px;
+
+.thankYouBody {
+    background-color: #e7e8e8;
+}
+  .thankYouBody h1{
+    margin-bottom: 20px;
 }
 
 .thankyou-btn {
@@ -113,3 +117,12 @@ color: rgb(176, 195, 205);
 background-color: #193f60;
 }*/
 
+/*Navigation Bar*/
+.navigationBar {
+    background-color: #e7e8e8;
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
