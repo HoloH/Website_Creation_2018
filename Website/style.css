@@ -99,3 +99,17 @@ body {
     background-color: white;
   }
 
+  /*Thank you for sharing your hike page*/
+.thankYouBody h1{
+    margin-bottom: 10px;
+}
+
+.thankyou-btn {
+
+}
+
+/*.thankyou-btn:hover {
+color: rgb(176, 195, 205);
+background-color: #193f60;
+}*/
+
