@@ -161,10 +161,14 @@ background-color: #193f60;
 }
 
 .navigationBar a:visited {
-    color:#193f60;
+    color:#e7e8e8;
 }
 
 .navigationBar a:hover {
     color:rgb(112, 111, 111);
     text-decoration: none;
+}
+
+#dropdownMenuButton {
+    border-color: #e7e8e8;
 }
