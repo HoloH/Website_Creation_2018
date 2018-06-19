@@ -12,6 +12,8 @@ const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+
+
 //________________MONGO_DB____________________
 //Connect to Mongo Server
 mongo.connect(url, function(err, db) {
@@ -49,7 +51,23 @@ app.get('/list', function (req, res) {
 });
 
 //Post Submit Hike Page
+app.post('/share_hike_form', function (req, res) {
+    //Collect Info
+    let firstName = req.body.firstName;
 
+    //Add to Mongo
+    dbh.collection("hikedata").insertOne({firstName:firstName},function(err, respo) {
+        if (err) throw err;
+        res.render('share_hike_form', {post:true});
+        });
+});
+
+/*app.get('/list', function (req, res) {
+    dbh.collection("hikedata").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        res.render('list', {games:result});
+      });
+});*/
 
 
 
