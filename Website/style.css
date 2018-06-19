@@ -1,6 +1,7 @@
 
 h1 {
     font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
+    padding-bottom:5px;
 }
 
 h2 {
@@ -58,6 +59,12 @@ body {
     background-color: #193f60;
 }
 
+.latestHike {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 
 /* share_hike_form */
 .bodyShareHike {
@@ -101,7 +108,7 @@ body {
   }
 
   /*Thank you for sharing your hike page*/
-  .thankYouHeader {
+  .pageHeader {
     color: white;
     text-align: center;
     height: 90vh;
@@ -112,30 +119,32 @@ body {
     justify-content: center;
 }
 
-.thankYouHeader h1 {
+.pageHeader h1 {
     font-size: 50px;
     font-weight: bold;
     color: white;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    padding-bottom:80px;
   }
 
-  .thankYouHeader p {
+  .pageHeader p {
     font-size: 15px;
     font-weight: lighter;
     color: rgb(255, 255, 255);
     opacity: 0.6;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
-.thankYouBody {
+.pageBody {
     background-color: #e7e8e8;
 }
-.thankYouBody h1{
-    margin-bottom: 20px;
+.pageBody h1{
+    margin-bottom: 10px;
 }
 
-.thankyou-btn {
+.page-btn {
     color:rgb(154, 161, 167);
+    margin-top: 30px;
 }
 
 /*.thankyou-btn:hover {
@@ -150,33 +159,63 @@ background-color: #193f60;
     font-weight: lighter;
     color: rgb(255, 255, 255);
     opacity: 0.6;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-left: 2px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
     text-decoration-color: rgb(112, 111, 111);
 }
 
-a.dropdown-item {
-    color:#193f60; 
-}
 
 .navigationBar a {
     color:#193f60;
+    font-weight: bolder;
+}
+
+.navigationBar a:hover {
+    color:#020508;
+    text-decoration: none; 
 }
 
 .navigationBar a:visited {
     color:#193f60;
 }
 
-.navigationBar a:hover {
-    color:rgb(112, 111, 111);
-    text-decoration: none;
-}
-
 #dropdownMenuButton {
     border-color: #e7e8e8;
 }
 
-a.socialMedia {
-    color: rgb(154, 161, 167);
+.socialMedia{
+    padding-bottom: 20px;
+    padding-right:10 px;
 }
+
+.socialMedia a{
+    color: rgb(154, 161, 167);
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.socialMedia a:hover {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: rgb(43, 42, 42);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 5px; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.footer a{
+    color: rgb(154, 161, 167);
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+

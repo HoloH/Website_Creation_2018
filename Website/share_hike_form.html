@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel= "stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>TheHikeExchange/ShareYourHike</title>
   </head>
@@ -15,17 +16,13 @@
   <body class="bodyShareHike">
 
     <div class="row navigationBar">
-        <div class="col dropdown">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            &#9776;
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="./main_page.html">Home</a>
-            <a class="dropdown-item" href="./about.html">About</a>
-            <a class="dropdown-item" href="./contact.html">Contact</a>
-            </div>
+        <div class="col navigationBarItems">
+            <a class="col navigationBarItem" href="./main_page.html">Home</a>
+            <a class="col navigationBarItem" href="./about.html">About</a>
+            <a class="col navigationBarItem" href="./contact.html">Contact</a>
+        </div>
         </div>  
-    </div>  
+    </div>
 
     <div class="shareHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('./share_header_compass.jpg');">
         <div class="shareHeaderContent">
@@ -94,6 +91,17 @@
         </div>    
     </div>    
 
+     <!-- Footer bar-->
+     <div class="row footer">
+        <div class="col footerItems">
+            <a class="col footerItem" href="./main_page.html">The Hikeexchange</a>
+            <a class="col footerItem" href="www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a class="col footerItem" href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+        </div> 
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
