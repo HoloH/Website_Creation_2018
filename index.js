@@ -4,13 +4,19 @@ const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
 
 //Mongo DB
+let url = "mongodb://localhost:27017";
 const mongo = require('mongodb');
-const url = "mongodb://localhost:27017";
 
 //Launch handlebars
 const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
+//________________MONGO_DB____________________
+//Connect to Mongo Server
+mongo.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbh = db.db("hikes");
 
 //Body Parser
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -38,12 +44,12 @@ app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
 
+app.get('/list', function (req, res) {
+    res.render('list', {});
+});
 
-//________________MONGO_DB____________________
-//Connect to Mongo Server
-mongo.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbh = db.db("hikes");
+//Post Submit Hike Page
+
 
 
 
@@ -105,3 +111,4 @@ app.use(express.static('client'));
 
 //________________LISTEN_TO_PORT____________________
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
+});
