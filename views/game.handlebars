@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{winner}}</h1>
+        </div>
+        <div class="col-12">
+            {{#if post}}
+                You played {{userChoice}}.
+                The computer played {{computerChoice}}.
+                <br>
+                <br>
+                <div>
+                <button type="submit" class="btn btn-primary" onclick="history.back(-1)">Play again</button>
+                </div>
+            {{/if}}
+            {{#unless post}}
+                <form action="/game"  method="post">
+                    <h1>Please select your hand and click play:</h1>
+                    <div class="form-group">
+                        <select class="form-control" id="userChoice" name="userChoice">
+                        <option>Rock</option>
+                        <option>Paper</option>
+                        <option>Scissors</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Play</button>
+                </form>
+            {{/unless}}
+        </div>
+    </div>
+</div>
+              

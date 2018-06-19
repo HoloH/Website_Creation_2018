@@ -1,0 +1,178 @@
+
+h1 {
+    font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
+}
+
+h2 {
+    font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
+    text-align: center;
+}
+
+body {
+    font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
+    background-color: #e7e8e8;
+}
+.banner {
+    color: white;
+    text-align: center;
+    height: 100vh;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  .banner p {
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+
+/*.container {
+    align-items: center;
+    text-align: center;
+    background-color:rgb(172, 171, 171);
+    opacity: 0.8;
+    margin: 5px 5px 5px 5px; 
+}*/
+
+.banner-btn {
+    color: #193f60;
+    border-color: #193f60;
+}
+
+.banner-btn:hover {
+    color: rgb(176, 195, 205);
+    background-color: #193f60;
+}
+
+
+/* share_hike_form */
+.bodyShareHike {
+    background-color: #e7e8e8;
+}
+
+.shareHeader {
+    color: white;
+    text-align: center;
+    height: 65vh;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shareHeader h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .shareHeader p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+
+  .hikeForm {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .submit-btn {
+    display:block;
+    background-color: white;
+  }
+
+  /*Thank you for sharing your hike page*/
+  .thankYouHeader {
+    color: white;
+    text-align: center;
+    height: 90vh;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankYouHeader h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .thankYouHeader p {
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+
+.thankYouBody {
+    background-color: #e7e8e8;
+}
+.thankYouBody h1{
+    margin-bottom: 20px;
+}
+
+.thankyou-btn {
+    color:rgb(154, 161, 167);
+}
+
+/*.thankyou-btn:hover {
+color: rgb(176, 195, 205);
+background-color: #193f60;
+}*/
+
+/*Navigation Bar*/
+.navigationBar {
+    background-color: #e7e8e8;
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 2px;
+    text-decoration-color: rgb(112, 111, 111);
+}
+
+a.dropdown-item {
+    color:#193f60; 
+}
+
+.navigationBar a {
+    color:#193f60;
+}
+
+.navigationBar a:visited {
+    color:#193f60;
+}
+
+.navigationBar a:hover {
+    color:rgb(112, 111, 111);
+    text-decoration: none;
+}
+
+#dropdownMenuButton {
+    border-color: #e7e8e8;
+}
