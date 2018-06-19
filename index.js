@@ -17,10 +17,12 @@
 //    res.render('home', {});
 //});
 
+//Requirements
 const express = require('express');
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
 
+//Launch handlebars
 const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -35,7 +37,7 @@ app.get('/game', function (req, res) {
     res.render('game', {});
 });
 
-//Render Contact and About
+//Render Pages
 app.get('/home', function (req, res) {
     res.render('home', {});
 });
@@ -54,6 +56,10 @@ app.get('/thank_you_page', function (req, res) {
 
 app.get('/share_hike_form', function (req, res) {
     res.render('share_hike_form', {});
+});
+
+app.get('/discover_hike', function (req, res) {
+    res.render('discover_hike', {});
 });
 
 //Game post
@@ -103,14 +109,6 @@ app.post('/game', function (req, res) {
     res.render('game', {post:true, userChoice: userChoice,
     computerChoice: computerChoice, winner: winner});
 });
-
-
-app.get('/:users', function (req, res) {
-    res.render('home', {users:req.params.users.split(",")});
-});
-app.get('/mysecret', (req, res) => res.send('Tu ne devrais pas être là!!!'));
-
-
 
 app.use(express.static('client'));
 
