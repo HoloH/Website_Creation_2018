@@ -46,6 +46,16 @@ app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
 
+//404 Page
+//Handle 404
+/*app.use(function(req, res) {
+    res.send('404: Page not Found', 404);
+ });*/
+
+app.use(function(req, res) {
+    res.status(404).end('error');
+});
+
 //Render List ---> TEST PAGE
 app.get('/list', function (req, res) {
     res.render('list', {});
