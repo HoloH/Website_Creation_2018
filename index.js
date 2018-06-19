@@ -52,9 +52,9 @@ app.get('/discover_hike', function (req, res) {
     res.send('404: Page not Found', 404);
  });*/
 
-app.use(function(req, res) {
-    res.status(404).end('error');
-});
+/*app.use(function(req, res, next){
+    res.status(404).render('404', {title: "Sorry, page not found"});
+});*/
 
 //Render List ---> TEST PAGE
 app.get('/list', function (req, res) {
@@ -139,6 +139,9 @@ app.post('/game', function (req, res) {
 
 //________________USE_EXPRESS____________________
 app.use(express.static('client'));
+app.use(function(req, res, next){
+    res.status(404).render('404', {title: "Sorry, page not found"});
+});
 
 //________________LISTEN_TO_PORT____________________
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
