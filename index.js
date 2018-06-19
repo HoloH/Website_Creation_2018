@@ -48,6 +48,14 @@ app.get('/contact', function (req, res) {
     res.render('contact', {});
 });
 
+app.get('/thank_you_page', function (req, res) {
+    res.render('thank_you_page', {});
+});
+
+app.get('/share_hike_form', function (req, res) {
+    res.render('share_hike_form', {});
+});
+
 //Game post
 app.post('/game', function (req, res) {
     //Setup of Choices
@@ -106,4 +114,4 @@ app.get('/mysecret', (req, res) => res.send('Tu ne devrais pas être là!!!'));
 
 app.use(express.static('client'));
 
-app.listen(3056, () => console.log('Example app listening on port 3056!'));
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
