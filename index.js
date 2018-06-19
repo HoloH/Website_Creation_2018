@@ -46,43 +46,43 @@ app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
 
-//404 Page
-//Handle 404
-/*app.use(function(req, res) {
-    res.send('404: Page not Found', 404);
- });*/
-
-/*app.use(function(req, res, next){
-    res.status(404).render('404', {title: "Sorry, page not found"});
-});*/
-
 //Render List ---> TEST PAGE
 app.get('/list', function (req, res) {
     res.render('list', {});
 });
 //END TEST
 
+//_____________SUBMIT_HIKE______________
 //Post Submit Hike Page
 app.post('/share_hike_form', function (req, res) {
     //Collect Info
     let firstName = req.body.firstName;
+    let lastName = req.body.lastName;
+    let email = req.body.email;
+    let region = req.body.region;
+    let duration = req.body.duration;
+    let difficulty = req.body.difficulty;
+    let description = req.body.description;
 
-    //Add to Mongo
-    dbh.collection("hikedata").insertOne({firstName:firstName},function(err, respo) {
-        if (err) throw err;
-        res.render('share_hike_form', {post:true});
-        });
+//Add to Mongo
+dbh.collection("hikedata").insertOne({firstName:firstName, lastName:lastName, email:email, region:region,
+duration:duration, difficulty:difficulty, description:description},function(err, respo) {
+    if (err) throw err;
+    res.render('share_hike_form', {post:true});
+    });
 });
+//_____________END_SUBMIT______________
 
+//RETRIEVE NOT WORKING!!!!
 //TEST
 app.get('/list', function (req, res) {
     dbh.collection("hikedata").find({}).toArray(function(err, result) {
         if (err) throw err;
-        res.render('list', {games:result});
+        res.render('list', {hikedata:result});
       });
 });
 //END OF TEST
-
+//________!!!!!___________
 
 //_____________GAME______________
 //Game post
@@ -139,6 +139,8 @@ app.post('/game', function (req, res) {
 
 //________________USE_EXPRESS____________________
 app.use(express.static('client'));
+
+//404
 app.use(function(req, res, next){
     res.status(404).render('404', {title: "Sorry, page not found"});
 });

@@ -4,6 +4,7 @@
 
 <body class="bodyShareHike">
 
+{{#unless post}}
     <div class="shareHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/share_header_compass.jpg');">
         <div class="shareHeaderContent">
             <h1>Share your favourite hikes on The HikeExchange</h1>
@@ -15,21 +16,21 @@
         <form class="hikeForm" action="/share_hike_form" method="post">
             <div class="row">
                 <div class="col  form-group">
-                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name">
+                    <input type="text" class="form-control" name="firstName" placeholder="First name">
                 </div>
                 <div class="col  form-group">
-                    <input type="text" class="form-control" placeholder="Last name">
+                    <input type="text" class="form-control" name="lastName" placeholder="Last name">
                 </div>
             </div>
             <div class="row">
                 <div class="col  form-group">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col form-group">
-                    <select class="form-control" id="exampleFormControlSelect1" placeholder="Select region">
+                    <select class="form-control" id="exampleFormControlSelect1" name="region" placeholder="Select region">
                         <option>Paris-region</option>
                         <option>Marseille-region</option>
                         <option>Lyon-region</option>
@@ -38,7 +39,7 @@
                     </select>
                 </div>
                 <div class="col  form-group">
-                    <select class="form-control" id="exampleFormControlSelect1" placeholder="Select time duration">
+                    <select class="form-control" id="exampleFormControlSelect1" name="duration" placeholder="Select time duration">
                         <option>< 1 hour</option>
                         <option>1-2 hour(s)</option>
                         <option>2-3 hours</option>
@@ -47,7 +48,7 @@
                     </select>
                 </div>
                 <div class="col  form-group">
-                    <select class="form-control" id="exampleFormControlSelect1" placeholder="Select difficulty level">
+                    <select class="form-control" id="exampleFormControlSelect1" name="difficulty" placeholder="Select difficulty level">
                         <option>Easy</option>
                         <option>Medium</option>
                         <option>Hard</option>
@@ -56,7 +57,7 @@
             </div>
             <div class="row">
                 <div class="col form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Give a description of your hike"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="description" placeholder="Give a description of your hike"></textarea>
                 </div>    
             </div>
         
@@ -69,6 +70,30 @@
             <div class="col-4">
             </div>
         </form>    
-    </div>   
+    </div>
+{{/unless}}
+
+
+
+{{#if post}}
+    <div class="thankYouHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/thank_you_banner.jpg');">
+        <div class="ThankYouHeaderContent">
+            <div class="row">
+                <div class="col">
+                    <h1>Thank you for sharing your hike!</h1>
+                </div>    
+            </div> 
+            <div class="row">
+                <div class="col-4"> 
+                </div>
+                <div class="col-4">       
+                    <a class="btn btn-outline-secondary thankyou-btn" href="/home">Explore more hikes</a>
+                </div>
+                <div class="col-4"> 
+                </div>    
+            </div>
+        </div>    
+    </div>
+{{/if}}
 
 </body>
