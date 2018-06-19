@@ -156,12 +156,16 @@ background-color: #193f60;
     text-decoration-color: rgb(112, 111, 111);
 }
 
+a.dropdown-item {
+    color:#193f60; 
+}
+
 .navigationBar a {
     color:#193f60;
 }
 
 .navigationBar a:visited {
-    color:#e7e8e8;
+    color:#193f60;
 }
 
 .navigationBar a:hover {
