@@ -90,7 +90,7 @@ body {
   }
 
   .shareHeader p {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: lighter;
     color: rgb(255, 255, 255);
     opacity: 0.6;
@@ -124,7 +124,7 @@ body {
     font-weight: bold;
     color: white;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-    padding-bottom:80px;
+    padding-bottom:10px;
   }
 
   .pageHeader p {
@@ -200,6 +200,16 @@ background-color: #193f60;
     text-decoration: none;
 }
 
+.searchForm {
+    background-color: transparent;
+}
+
+.btn-search {
+    background-color: transparent;
+    color:rgb(154, 161, 167);
+    margin-top: 30px;
+}
+
 .footer {
     background-color: rgb(43, 42, 42);
     margin-bottom: 10px;
@@ -218,4 +228,5 @@ background-color: #193f60;
     font-weight: lighter;
     text-decoration: none;
 }
+
 
