@@ -27,7 +27,7 @@ app.use(bodyParser.json())
 
 //________________RENDER_PAGES____________________
 //Render Pages
-app.get('/home', function (req, res) {
+app.get('/', function (req, res) {
     res.render('home', {});
 });
 app.get('/about', function (req, res) {
@@ -46,9 +46,11 @@ app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
 
+//Render List ---> TEST PAGE
 app.get('/list', function (req, res) {
     res.render('list', {});
 });
+//END TEST
 
 //Post Submit Hike Page
 app.post('/share_hike_form', function (req, res) {
@@ -62,13 +64,14 @@ app.post('/share_hike_form', function (req, res) {
         });
 });
 
-/*app.get('/list', function (req, res) {
+//TEST
+app.get('/list', function (req, res) {
     dbh.collection("hikedata").find({}).toArray(function(err, result) {
         if (err) throw err;
         res.render('list', {games:result});
       });
-});*/
-
+});
+//END OF TEST
 
 
 //_____________GAME______________
