@@ -1,53 +1,49 @@
-//________________REQUIREMENTS____________________
+//Requirements
 const express = require('express');
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
-
-//Mongo DB
 const mongo = require('mongodb');
-const url = "mongodb://localhost:27017";
 
 //Launch handlebars
 const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-//Body Parser
+// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
 app.use(bodyParser.json())
 
+app.get('/game', function (req, res) {
+    res.render('game', {});
+});
 
-//________________RENDER_PAGES____________________
 //Render Pages
 app.get('/home', function (req, res) {
     res.render('home', {});
 });
+
 app.get('/about', function (req, res) {
     res.render('about', {});
 });
+
 app.get('/contact', function (req, res) {
     res.render('contact', {});
 });
+
 app.get('/thank_you_page', function (req, res) {
     res.render('thank_you_page', {});
 });
+
 app.get('/share_hike_form', function (req, res) {
     res.render('share_hike_form', {});
 });
+
 app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
 
-
-//________________MONGO_DB____________________
-//Connect to Mongo Server
-mongo.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbh = db.db("hikes");
-
-
-
-//_____________GAME______________
 //Game post
 app.post('/game', function (req, res) {
     //Setup of Choices
@@ -95,13 +91,7 @@ app.post('/game', function (req, res) {
     res.render('game', {post:true, userChoice: userChoice,
     computerChoice: computerChoice, winner: winner});
 });
-//_____________GAME______________
 
-
-
-
-//________________USE_EXPRESS____________________
 app.use(express.static('client'));
 
-//________________LISTEN_TO_PORT____________________
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
