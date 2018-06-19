@@ -1,10 +1,8 @@
-<!doctype html>
-<html lang="en">
+<head>
+    <title>TheHikeExchange - Share a Hike</title>
+</head>
 
-  <head>
-  </head>
-  
-  <body class="bodyShareHike">
+<body class="bodyShareHike">
 
     <div class="shareHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/share_header_compass.jpg');">
         <div class="shareHeaderContent">
@@ -14,10 +12,10 @@
     </div>  
 
     <div class="container">
-        <form class="hikeForm">
+        <form class="hikeForm" action="/share_hike_form" method="post">
             <div class="row">
                 <div class="col  form-group">
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name">
                 </div>
                 <div class="col  form-group">
                     <input type="text" class="form-control" placeholder="Last name">
@@ -61,17 +59,16 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Give a description of your hike"></textarea>
                 </div>    
             </div>
-        </form>
+        
         <div class="row">
             <div class="col-4">
             </div>    
             <div class="col-4">
-                <a class="btn btn-outline-secondary submit-btn" href="/thank_you_page">Share your hike</a>
+                <button type="submit" class="btn btn-outline-secondary submit-btn">Share your hike</button>
             </div>
             <div class="col-4">
-            </div>    
-        </div>    
-    </div>    
+            </div>
+        </form>    
+    </div>   
 
- </body>
-</html>
+</body>

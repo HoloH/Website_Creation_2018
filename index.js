@@ -4,13 +4,21 @@ const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
 
 //Mongo DB
+let url = "mongodb://localhost:27017";
 const mongo = require('mongodb');
-const url = "mongodb://localhost:27017";
 
 //Launch handlebars
 const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
+
+
+//________________MONGO_DB____________________
+//Connect to Mongo Server
+mongo.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbh = db.db("hikes");
 
 //Body Parser
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -19,7 +27,7 @@ app.use(bodyParser.json())
 
 //________________RENDER_PAGES____________________
 //Render Pages
-app.get('/home', function (req, res) {
+app.get('/', function (req, res) {
     res.render('home', {});
 });
 app.get('/about', function (req, res) {
@@ -38,13 +46,42 @@ app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
 
+//404 Page
+//Handle 404
+/*app.use(function(req, res) {
+    res.send('404: Page not Found', 404);
+ });*/
 
-//________________MONGO_DB____________________
-//Connect to Mongo Server
-mongo.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbh = db.db("hikes");
+/*app.use(function(req, res, next){
+    res.status(404).render('404', {title: "Sorry, page not found"});
+});*/
 
+//Render List ---> TEST PAGE
+app.get('/list', function (req, res) {
+    res.render('list', {});
+});
+//END TEST
+
+//Post Submit Hike Page
+app.post('/share_hike_form', function (req, res) {
+    //Collect Info
+    let firstName = req.body.firstName;
+
+    //Add to Mongo
+    dbh.collection("hikedata").insertOne({firstName:firstName},function(err, respo) {
+        if (err) throw err;
+        res.render('share_hike_form', {post:true});
+        });
+});
+
+//TEST
+app.get('/list', function (req, res) {
+    dbh.collection("hikedata").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        res.render('list', {games:result});
+      });
+});
+//END OF TEST
 
 
 //_____________GAME______________
@@ -102,6 +139,10 @@ app.post('/game', function (req, res) {
 
 //________________USE_EXPRESS____________________
 app.use(express.static('client'));
+app.use(function(req, res, next){
+    res.status(404).render('404', {title: "Sorry, page not found"});
+});
 
 //________________LISTEN_TO_PORT____________________
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
+});
