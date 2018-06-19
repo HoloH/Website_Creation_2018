@@ -1,0 +1,25 @@
+{
+  "name": "website_creation_2018",
+  "version": "0.0.0",
+  "description": "JSON package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoloH/Website_Creation_2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoloH/Website_Creation_2018/issues"
+  },
+  "homepage": "https://github.com/HoloH/Website_Creation_2018#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mangodb": "^1.0.0"
+  }
+}
