@@ -212,6 +212,27 @@ background-color: #193f60;
     margin-right: -5px;
 }
 
+.hikeItem {
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin-bottom: 25 px;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 55px;
+} 
+
+.hikeItem h4{
+    padding-top: 15px;
+}    
+
+.hikeImage {
+    /*max-width: 50%;*/
+    /*margin:auto;*/
+    padding-bottom: 15px;
+}
+
+
 .footer {
     background-color: rgb(43, 42, 42);
     padding-bottom: 10px;
