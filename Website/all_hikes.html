@@ -14,7 +14,8 @@
   </head>
   
   <body class="bodyShareHike">
-
+   
+    <!--Navigation bar-->
     <div class="row navigationBar">
         <div class="col navigationBarItems">
             <a class="col navigationBarItem" href="./main_page.html">Home</a>
@@ -24,29 +25,68 @@
         </div>  
     </div>
 
-    <div class="shareHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('./share_header_compass.jpg');">
+     <!--header-->
+    <div class="shareHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('./hikeBase.jpg');">
         <div class="shareHeaderContent">
             <h1>Welcome to the HikeBase</h1>
             <p>Explore the HikeBase for new adventures</p>
         </div>
     </div>  
 
+    <!--Hikes (new container for each hike)-->
+    <div class="container hikeItem">
+        <div class="row hikeContent">
+            <div class="col">
+                <h4>Bois de Bologne: Around the small lake</h4>
+            </div>
+        </div>  
+        <div class="row hikeContent">    
+            <div class="col author">
+                <p>by: Ola Nordmann</p>
+            </div>
+        </div>
+        <div class="row hikeContent hikeImage">
+            <div class="col">
+                <img src="./exampleHike2.jpg" class="img-fluid" alt="Image from your hike">
+            </div>
+        </div>    
+        <div class="row hikeContent">     
+            <div class="col-4 characteristics">
+                <p>Region: Paris</p>
+            </div>
+            <div class="col-4 characteristics">
+                <p>Time: <1h</p>
+            </div>
+            <div class="col-4 characteristics">
+                <p>Difficulty: Easy</p>
+            </div>
+        </div>
+        <div class="row hikeContent"> 
+            <div class="col description">
+                <p>Start the hike by the small lake in the Bologne forrest. Follow the track around the lake. Watch out for joggers and dogs on the loose. If you're feeling extravagant, take the trip to the lake island and eat at the restaurant.
+                Happy hiking!
+                </p>
+            </div>    
+        </div>     
+    </div>  
+    
+    
     <div class="container hikeItem">
         <div class="row hikeContent">
             <div class="col">
                 <h4>Hike name</h4>
             </div>
-        </div>  
-        <div class="row hikeContent hikeImage">
-            <div class="col">
-                <p>Image here </p>>
-            </div>
-        </div>    
+        </div> 
         <div class="row hikeContent">    
             <div class="col author">
                 <p>by: name</p>
             </div>
-        </div>
+        </div> 
+        <div class="row hikeContent hikeImage">
+            <div class="col">
+                <img src=" " class="img-fluid" alt="Image from your hike">
+            </div>
+        </div>    
         <div class="row hikeContent">     
             <div class="col-4 characteristics">
                 <p>Region:</p>
@@ -63,7 +103,7 @@
                 <p>This field will give a description of the hike</p>
             </div>    
         </div>     
-    </div>    
+    </div>   
 
      <!-- Footer bar-->
      <div class="row footer">
