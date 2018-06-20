@@ -78,7 +78,7 @@ duration:duration, difficulty:difficulty, description:description},function(err,
 //_____________END_SUBMIT______________
 
 
-
+/*
 //_____________RETRIEVE ALL______________
 app.get('/list', function (req, res) {
     dbh.collection("hikedata").find({}).toArray(function(err, result) {
@@ -87,7 +87,7 @@ app.get('/list', function (req, res) {
       });
 });
 //_____________END_OF_TEST______________
-
+*/
 
 
 //_____________SEARCH_PAGE______________
@@ -117,5 +117,5 @@ app.use(function(req, res, next){
 
 
 //________________LISTEN_TO_PORT____________________
-app.listen(3000, () => console.log('TheHikeExchange listening on port 3000!'));
+app.listen(3056, () => console.log('TheHikeExchange listening on port 3056!'));
 });
