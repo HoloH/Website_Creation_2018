@@ -1,30 +1,77 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<head>
     <title>TheHikeExchange - Discover</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="thankYouHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/search_hike.jpg');">
-      <div class="ThankYouHeaderContent">
+<!-- SEARCH OPTIONS PAGE -->
+{{#unless post}}
+<div class="pageHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/search_hike.jpg');">
+      <div class="pageHeaderContent">
           <div class="row">
               <div class="col">
-                  <h1>Discover a new hike</h1>
-                  <p>Search the HikeBase and discover new hikes today!</p>
+                  <h1>Explore the HikeBase</h1>
+                  <p>Search the HikeBase and discover a new hike today!</p>
               </div>    
           </div> 
-          <div class="row">
-              <div class="col-4"> 
-              </div>
-              <div class="col-4">       
-                  <a class="btn btn-outline-secondary thankyou-btn" href="/home">Explore more hikes</a>
-              </div>
-              <div class="col-4"> 
-              </div>    
-          </div>
-      </div>    
-    </div> 
 
-  </body>
-</html>
+          <div class="container">
+              <form class="hikeForm" action="discover_hike" method="post">
+                  <div class="row">
+                      <div class="col searchForm form-group">
+                          <select class="form-control" id="exampleFormControlSelect1" name="region" placeholder="Select region">
+                              <option>Paris-region</option>
+                              <option>Marseille-region</option>
+                              <option>Lyon-region</option>
+                              <option>Toulouse-region</option>
+                              <option>Nice-region</option>
+                          </select>
+                      </div>
+                      <div class="col searchForm form-group">
+                          <select class="form-control" id="exampleFormControlSelect1" name="duration" placeholder="Select time duration">
+                              <option>&lt; 1 hour</option>
+                              <option>1-2 hour(s)</option>
+                              <option>2-3 hours</option>
+                              <option>3-5 hours</option>
+                              <option>Daytrip (>5 hours)</option>
+                          </select>
+                      </div>
+                      <div class="col searchForm form-group">
+                          <select class="form-control" id="exampleFormControlSelect1" name="difficulty" placeholder="Select difficulty level">
+                              <option>Easy</option>
+                              <option>Medium</option>
+                              <option>Hard</option>
+                          </select>
+                      </div>
+                  </div>
+                
+              <div class="row">
+                  <div class="col-4">
+                  </div>    
+                  <div class="col-4">
+                      <button type="submit" class="btn btn-search btn-outline-secondary submit-btn">Search HikeBase</button>
+                  </div>
+                  <div class="col-4">
+                  </div>    
+              </div>
+              </form>    
+          </div>
+
+      </div>
+</div>
+{{/unless}}
+
+<!-- SEARCH RESULTS -->
+{{#if post}}
+{{#each hikedata}}
+<div>
+    <h4>By {{firstName}} {{lastName}}</h4>
+    <h6>Region: {{region}}</h6>
+    <h6>Duration: {{duration}}</h6>
+    <h6>Difficulty: {{difficulty}}</h6>
+    <br>
+</div>
+{{/each}}
+{{/if}}
+
+</body>

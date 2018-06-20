@@ -1,7 +1,11 @@
 <h1>hello</h1>
 
-<ol>
-    {{#each hikedata}}
-    <li>{{firstName}} and {{lastName}} and {{email}} and {{difficulty}}</li>
-    {{/each}}
-</ol>
+{{#each hikedata}}
+<div>
+    <h4>By {{firstName}} {{lastName}}</h4>
+    <h6>Region: {{region}}</h6>
+    <h6>Duration: {{duration}}</h6>
+    <h6>Difficulty: {{difficulty}}</h6>
+    <br>
+</div>
+{{/each}}
