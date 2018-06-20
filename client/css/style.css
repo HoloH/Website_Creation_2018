@@ -1,3 +1,10 @@
+* {
+    max-width:100%;
+}
+
+.ContactHeaderContent .pageHeaderContent {
+    min-width: 100%;
+}
 
 h1 {
     font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
@@ -148,11 +155,6 @@ body {
     margin-top: 30px;
 }
 
-/*.thankyou-btn:hover {
-color: rgb(176, 195, 205);
-background-color: #193f60;
-}*/
-
 /*Navigation Bar*/
 .navigationBar {
     background-color: #e7e8e8;
@@ -216,6 +218,7 @@ background-color: #193f60;
     background-color: rgb(43, 42, 42);
     padding-bottom: 10px;
     padding-top: 10px;
+    width: 100%;
 }
 
 .footer a{

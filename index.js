@@ -62,6 +62,7 @@ app.post('/share_hike_form', function (req, res) {
     //Collect Info
     let firstName = req.body.firstName;
     let lastName = req.body.lastName;
+    let hikeName = req.body.hikeName;
     let email = req.body.email;
     let region = req.body.region;
     let duration = req.body.duration;
@@ -69,7 +70,7 @@ app.post('/share_hike_form', function (req, res) {
     let description = req.body.description;
 
 //Add to Mongo
-dbh.collection("hikedata").insertOne({firstName:firstName, lastName:lastName, email:email, region:region,
+dbh.collection("hikedata").insertOne({firstName:firstName, lastName:lastName, email:email, hikeName:hikeName, region:region,
 duration:duration, difficulty:difficulty, description:description},function(err, respo) {
     if (err) throw err;
     res.render('share_hike_form', {post:true});
