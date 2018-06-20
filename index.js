@@ -28,9 +28,16 @@ app.use(bodyParser.json())
 
 //________________RENDER_PAGES____________________
 //Render Pages
+
+//Home - Retrieves the Three Last Hikes
 app.get('/', function (req, res) {
-    res.render('home', {});
+    dbh.collection("hikedata").find({}).sort({_id:-1}).limit(3).toArray(function(err, result) {
+    if (err) throw (err);
+    res.render('home', {hikedata:result});
+    });
 });
+
+//Other Pages
 app.get('/about', function (req, res) {
     res.render('about', {});
 });
