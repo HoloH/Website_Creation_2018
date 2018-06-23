@@ -1,5 +1,6 @@
 <head>
   <title>TheHikeExchange - Home</title>
+  
 </head>
 
 <body>
@@ -18,16 +19,44 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col latestHike">
-          <h4>Latest additions to the HikeBase</h4>
-          <p>This will feature the latest added hikes</p>
-        </div>
-      </div>
+<!-- Latest 3 Hikes -->    
+
+<div class="newHikes">
+  <h4>Latest additions to the HikeBase</h4>
+</div>
+
+{{#each hikedata}}
+
+  <div class="hikeGrid">    
+    <div class="ph">
+      <img src="images/exampleHike2.jpg" class="hikeImage" alt="Image from your hike" style="align-content: left">
     </div>
-    
-    {{#each hikedata}}
-    {{firstName}}
-    {{/each}}
+
+    <div class="na">
+      <h4>{{hikeName}}</h4>
+    </div>
+
+    <div class="Na">
+      <p>By: {{firstName}} {{lastName}}</p>
+    </div>
+
+    <div class="De">
+      <p>{{description}}</p>
+    </div>
+
+    <div class="re">
+      <p>Region: {{region}}</p>
+    </div>
+
+    <div class="du">
+      <p>Time: {{duration}}</p>
+    </div>
+
+    <div class="di">
+      <p>Difficulty: {{difficulty}}</p>
+    </div>
+  </div>
+
+{{/each}}
+
 </body>
