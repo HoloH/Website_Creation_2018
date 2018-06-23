@@ -1,11 +1,25 @@
+/*Page Fixes*/
 * {
     max-width:100%;
 }
 
-.ContactHeaderContent .pageHeaderContent {
+.pageHeader .pageHeaderContent {
     min-width: 100%;
 }
 
+.mWidth {
+    min-width: 80vw;
+}
+
+.formFix div {
+    margin: 3px;
+}
+
+.formFix2 div {
+    margin: 0px;
+}
+
+/*Headers*/
 h1 {
     font-family: 'Helvetica Neue','Segoe UI',sans-serif,'Arial';
     padding-bottom:5px;
@@ -29,7 +43,6 @@ body {
     color: white;
     text-align: center;
     height: 100vh;
-    /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
     display: flex;
     align-items: center;
@@ -48,14 +61,6 @@ body {
     margin-bottom: 30px;
   }
 
-/*.container {
-    align-items: center;
-    text-align: center;
-    background-color:rgb(172, 171, 171);
-    opacity: 0.8;
-    margin: 5px 5px 5px 5px; 
-}*/
-
 .banner-btn {
     color: #193f60;
     border-color: #193f60;
@@ -73,7 +78,7 @@ body {
 }
 
 
-/* share_hike_form */
+/* Share Hike Form */
 .bodyShareHike {
     background-color: #e7e8e8;
 }
@@ -82,7 +87,6 @@ body {
     color: white;
     text-align: center;
     height: 65vh;
-    /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
     display: flex;
     align-items: center;
@@ -119,7 +123,7 @@ body {
   .pageHeader {
     color: white;
     text-align: center;
-    height: 90vh;
+    height: calc(100vh - 86px);
     /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
     display: flex;
@@ -231,4 +235,7 @@ body {
     text-decoration: none;
 }
 
-
+/*Contact Page*/
+.emailLink {
+    color: rgb(107, 220, 255);
+}

@@ -53,7 +53,9 @@ app.get('/share_hike_form', function (req, res) {
 app.get('/discover_hike', function (req, res) {
     res.render('discover_hike', {});
 });
-
+app.get('/no_result', function (req, res) {
+    res.render('no_result', {});
+});
 
 
 //_____________SUBMIT_HIKE______________

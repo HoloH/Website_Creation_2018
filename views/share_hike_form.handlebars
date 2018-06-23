@@ -13,24 +13,24 @@
     </div>  
 
     <div class="container">
-        <form class="hikeForm" action="/share_hike_form" method="post">
+        <form class="hikeForm formFix" action="/share_hike_form" method="post">
             <!-- About the User -->
             <div class="row">
-                <div class="col  form-group">
+                <div class="col form-group">
                     <input type="text" class="form-control" name="firstName" placeholder="First name">
                 </div>
-                <div class="col  form-group">
+                <div class="col form-group">
                     <input type="text" class="form-control" name="lastName" placeholder="Last name">
                 </div>
             </div>
             <div class="row">
-                <div class="col  form-group">
+                <div class="col form-group">
                     <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
                 </div>
             </div>
             <!-- About the Hike -->
             <div class="row">
-                <div class="col  form-group">
+                <div class="col form-group">
                     <input type="text" class="form-control" name="hikeName" placeholder="Name your hike">
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <option>Nice-region</option>
                     </select>
                 </div>
-                <div class="col  form-group">
+                <div class="col form-group">
                     <select class="form-control" id="exampleFormControlSelect1" name="duration" placeholder="Select time duration">
                         <option>&lt; 1 hour</option>
                         <option>1-2 hour(s)</option>
@@ -53,7 +53,7 @@
                         <option>Daytrip (>5 hours)</option>
                     </select>
                 </div>
-                <div class="col  form-group">
+                <div class="col form-group">
                     <select class="form-control" id="exampleFormControlSelect1" name="difficulty" placeholder="Select difficulty level">
                         <option>Easy</option>
                         <option>Medium</option>
@@ -68,12 +68,13 @@
             </div>
         
         <div class="row">
-            <div class="col-4">
+            <div class="col-1">
                 </div>    
-                    <div class="col-4">
-                        <button type="submit" onClick="return empty()" class="btn btn-outline-secondary submit-btn">Share your hike</button>
+                    <div class="col-10">
+                        <center><button type="submit" onClick="return empty()" class="btn btn-outline-secondary submit-btn">
+                            Share your hike</button></center>
                     </div>
-                <div class="col-4">
+                <div class="col-1">
             </div>
         </div>
         </form>    
@@ -92,12 +93,12 @@
                 </div>    
             </div> 
             <div class="row">
-                <div class="col-4"> 
+                <div class="col-1"> 
                 </div>
-                <div class="col-4">       
+                <div class="col-10">       
                     <a class="btn btn-outline-secondary page-btn" href="/">Explore more hikes</a>
                 </div>
-                <div class="col-4"> 
+                <div class="col-1"> 
                 </div>    
             </div>
         </div>    
