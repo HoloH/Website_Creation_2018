@@ -12,7 +12,17 @@ const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+//IsEmpty Function
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
 
+//ObjectId
+var ObjectId = require('mongodb').ObjectId;
 
 //________________MONGO_DB____________________
 //Connect to Mongo Server
@@ -56,6 +66,9 @@ app.get('/discover_hike', function (req, res) {
 app.get('/no_result', function (req, res) {
     res.render('no_result', {});
 });
+app.get('/404', function (req, res) {
+    res.render('404', {});
+});
 
 
 //_____________SUBMIT_HIKE______________
@@ -70,27 +83,23 @@ app.post('/share_hike_form', function (req, res) {
     let duration = req.body.duration;
     let difficulty = req.body.difficulty;
     let description = req.body.description;
+    let descripShort = ""
+    if (description.length < 100) {
+        descripShort = description
+    }
+    else {
+        descripShort = description.substr(0,99) + "..."
+    }
 
 //Add to Mongo
 dbh.collection("hikedata").insertOne({firstName:firstName, lastName:lastName, email:email, hikeName:hikeName, region:region,
-duration:duration, difficulty:difficulty, description:description},function(err, respo) {
+duration:duration, difficulty:difficulty, description:description, descripShort:descripShort},function(err, respo) {
     if (err) throw err;
     res.render('share_hike_form', {post:true});
     });
 });
 //_____________END_SUBMIT______________
 
-
-/*
-//_____________RETRIEVE ALL______________
-app.get('/list', function (req, res) {
-    dbh.collection("hikedata").find({}).toArray(function(err, result) {
-        if (err) throw err;
-        res.render('list', {hikedata:result});
-      });
-});
-//_____________END_OF_TEST______________
-*/
 
 
 //_____________SEARCH_PAGE______________
@@ -105,9 +114,26 @@ app.post('/discover_hike', function (req, res) {
     //Retrieve matches from Mongo
     dbh.collection("hikedata").find({region:region, duration:duration, difficulty:difficulty}).toArray(function(err, result) {
         if (err) throw err;
-        res.render('discover_hike', {post:true, hikedata:result});
+        if (isEmpty(result)) {
+            res.render('no_result', {});
+        }
+    else {
+        res.render('discover_hike', {post:true, region:region, duration:duration, difficulty:difficulty, hikedata:result});
+        }
     })
 });
+
+
+//________________HIKE_PAGE____________________
+//DANGERNO WORKS
+app.get('/hike:id', function(req, res) {
+    dbh.collection("hikedata").find({"_id":ObjectId(req.params.id)}).toArray(function(err, result) {
+        if (err) throw err;
+        res.render('hike', {hikedata:result, hikeid:req.params.id});
+    });
+});
+//________________END_HIKE_PAGE____________________
+
 
 
 //________________USE_EXPRESS____________________
@@ -115,7 +141,7 @@ app.use(express.static('client'));
 
 //404
 app.use(function(req, res, next){
-    res.status(404).render('404', {title: "Sorry, page not found"});
+    res.status(404).render('404', {});
 });
 
 

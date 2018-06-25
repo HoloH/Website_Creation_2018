@@ -1,0 +1,44 @@
+<head>
+    <title>404 - Time</title>
+</head>
+
+<body class="pageBody">
+
+{{#each hikedata}}
+
+<div class="hikePage">
+            <div class="hikeName">
+            <h1>{{hikeName}}</h1>
+            </div>
+
+            <div class="margin2">
+            <img src="images/exampleHike2.jpg" class="hikeImage2" alt="Image from your hike">
+            </div>     
+
+        <div class="row center-align">
+            <div class="col-3">
+            <h4>By:<br> {{firstName}} {{lastName}}</h4>
+            </div>
+
+            <div class="col-3">
+            <h4>Region:<br> {{region}}</h4>
+            </div>
+
+            <div class="col-3">
+            <h4>Time:<br> {{duration}}</h4>
+            </div>
+
+            <div class="col-3">
+            <h4>Difficulty:<br> {{difficulty}}</h4>
+            </div>
+        </div>
+
+            <div class="">
+            <p>{{description}}</p>
+            </div>
+        
+</div>
+
+{{/each}}
+
+</body>

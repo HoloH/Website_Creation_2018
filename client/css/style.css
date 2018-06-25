@@ -3,10 +3,6 @@
     max-width:100%;
 }
 
-.pageHeader .pageHeaderContent {
-    min-width: 100%;
-}
-
 .mWidth {
     min-width: 80vw;
 }
@@ -283,7 +279,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 1005px) {
     .hikeGrid {
         display: grid;
         grid-template-columns: 1fr 1fr 3fr;
@@ -302,6 +298,9 @@ body {
     .na {
         text-align: center;
     }
+    .De {
+        margin-left: 20px;
+    }
 }
 
     /*Grid Areas*/
@@ -312,5 +311,30 @@ body {
 .du {grid-area: du;}
 .di {grid-area: di;}
 
+.srchBkg {
+    background-color: rgb(243, 243, 243);
+    min-height: calc(100vh - 86px);
+    padding-bottom: 10px;
+}
 
+.searchBot {
+    margin-bottom: 20px;
+}
 
+/*Hike Page*/
+.hikePage {
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.hikeName {
+    align-content: left;
+}
+
+.hikeImage2 {
+    width: calc(100vw - 40px);
+}
+
+.margin2 {
+    margin-bottom: 10px;
+}

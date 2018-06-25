@@ -64,15 +64,45 @@
 
 <!-- SEARCH RESULTS -->
 {{#if post}}
-{{#each hikedata}}
-<div>
-    <h4>By {{firstName}} {{lastName}}</h4>
-    <h6>Region: {{region}}</h6>
-    <h6>Duration: {{duration}}</h6>
-    <h6>Difficulty: {{difficulty}}</h6>
-    <br>
-</div>
-{{/each}}
+    <div class="srchBkg">
+        <div class="newHikes searchBot">
+        <h4>Search Results for the {{region}}, {{duration}} long and {{difficulty}} difficulty</h4>
+        </div>
+
+        {{#each hikedata}}
+
+        <div class="hikeGrid">    
+            <div class="ph">
+            <img src="images/exampleHike2.jpg" class="hikeImage" alt="Image from your hike" style="align-content: left">
+            </div>
+
+            <div class="na">
+            <a href="/hike{{_id}}"><h4>{{hikeName}}</h4></a>
+            </div>
+
+            <div class="Na">
+            <p>By: {{firstName}} {{lastName}}</p>
+            </div>
+
+            <div class="De">
+            <p>{{descripShort}}</p>
+            </div>
+
+            <div class="re">
+            <p>Region: {{region}}</p>
+            </div>
+
+            <div class="du">
+            <p>Time: {{duration}}</p>
+            </div>
+
+            <div class="di">
+            <p>Difficulty: {{difficulty}}</p>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
 {{/if}}
 
 </body>

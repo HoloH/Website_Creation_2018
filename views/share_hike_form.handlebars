@@ -17,54 +17,65 @@
             <!-- About the User -->
             <div class="row">
                 <div class="col form-group">
-                    <input type="text" class="form-control" name="firstName" placeholder="First name">
+                    <input type="text" class="form-control" name="firstName" placeholder="First name" required="required">
                 </div>
                 <div class="col form-group">
-                    <input type="text" class="form-control" name="lastName" placeholder="Last name">
+                    <input type="text" class="form-control" name="lastName" placeholder="Last name" required="required">
                 </div>
             </div>
             <div class="row">
                 <div class="col form-group">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" required="required">
                 </div>
             </div>
             <!-- About the Hike -->
             <div class="row">
                 <div class="col form-group">
-                    <input type="text" class="form-control" name="hikeName" placeholder="Name your hike">
+                    <input type="text" class="form-control" name="hikeName" placeholder="Name your hike" required="required">
                 </div>
             </div>
             <div class="row">
                 <div class="col form-group">
-                    <select class="form-control" id="exampleFormControlSelect1" name="region" placeholder="Select region">
-                        <option>Paris-region</option>
-                        <option>Marseille-region</option>
-                        <option>Lyon-region</option>
-                        <option>Toulouse-region</option>
-                        <option>Nice-region</option>
+                    <select class="form-control" id="exampleFormControlSelect1" name="region" placeholder="Select region" required>
+                        <option value="">Region</option>
+                        <option value="Paris-region">Paris-region</option>
+                        <option value="Marseille-region">Marseille-region</option>
+                        <option value="Lyon-region">Lyon-region</option>
+                        <option value="Toulouse-region">Toulouse-region</option>
+                        <option value="Nice-region">Nice-region</option>
                     </select>
                 </div>
                 <div class="col form-group">
-                    <select class="form-control" id="exampleFormControlSelect1" name="duration" placeholder="Select time duration">
-                        <option>&lt; 1 hour</option>
-                        <option>1-2 hour(s)</option>
-                        <option>2-3 hours</option>
-                        <option>3-5 hours</option>
-                        <option>Daytrip (>5 hours)</option>
+                    <select class="form-control" id="exampleFormControlSelect1" name="duration" placeholder="Select time duration" required>
+                        <option value="">Duration</option>
+                        <option value="&lt; 1 hour">&lt; 1 hour</option>
+                        <option value="1-2 hour(s)">1-2 hour(s)</option>
+                        <option value="2-3 hours">2-3 hours</option>
+                        <option value="3-5 hours">3-5 hours</option>
+                        <option value="Daytrip (>5 hours)">Daytrip (>5 hours)</option>
                     </select>
                 </div>
                 <div class="col form-group">
-                    <select class="form-control" id="exampleFormControlSelect1" name="difficulty" placeholder="Select difficulty level">
-                        <option>Easy</option>
-                        <option>Medium</option>
-                        <option>Hard</option>
+                    <select class="form-control" id="exampleFormControlSelect1" name="difficulty" placeholder="Select difficulty level" required>
+                        <option value="">Difficulty</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1 fieldValue" rows="10" name="description" placeholder="Give a description of your hike"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1 fieldValue" rows="10" name="description" placeholder="Give a description of your hike" required="required"></textarea>
                 </div>    
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 form-group">
+                    <label for="exampleFormControlFile1">Select a photo</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" required="required">
+                </div>
+                <div class="col-1"></div>
             </div>
         
         <div class="row">
@@ -90,7 +101,7 @@
             <div class="row">
                 <div class="col">
                     <h1>Thank you for sharing your hike!</h1>
-                </div>    
+                </div>
             </div> 
             <div class="row">
                 <div class="col-1"> 
