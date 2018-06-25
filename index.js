@@ -72,6 +72,7 @@ app.get('/404', function (req, res) {
 
 
 //_____________SUBMIT_HIKE______________
+
 //Post Submit Hike Page
 app.post('/share_hike_form', function (req, res) {
     //Collect Info
@@ -84,6 +85,7 @@ app.post('/share_hike_form', function (req, res) {
     let difficulty = req.body.difficulty;
     let description = req.body.description;
     let descripShort = ""
+    let photoURL = req.body.photoURL;
     if (description.length < 100) {
         descripShort = description
     }
@@ -93,7 +95,7 @@ app.post('/share_hike_form', function (req, res) {
 
 //Add to Mongo
 dbh.collection("hikedata").insertOne({firstName:firstName, lastName:lastName, email:email, hikeName:hikeName, region:region,
-duration:duration, difficulty:difficulty, description:description, descripShort:descripShort},function(err, respo) {
+duration:duration, difficulty:difficulty, description:description, photoURL:photoURL}, function(err, respo) {
     if (err) throw err;
     res.render('share_hike_form', {post:true});
     });
@@ -125,7 +127,6 @@ app.post('/discover_hike', function (req, res) {
 
 
 //________________HIKE_PAGE____________________
-//DANGERNO WORKS
 app.get('/hike:id', function(req, res) {
     dbh.collection("hikedata").find({"_id":ObjectId(req.params.id)}).toArray(function(err, result) {
         if (err) throw err;

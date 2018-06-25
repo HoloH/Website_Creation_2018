@@ -23,6 +23,7 @@
     "handlebars": "^4.0.11",
     "jquery-validation": "^1.17.0",
     "mangodb": "^1.0.0",
-    "mongodb": "^3.0.10"
+    "mongodb": "^3.0.10",
+    "multer": "^1.3.0"
   }
 }
