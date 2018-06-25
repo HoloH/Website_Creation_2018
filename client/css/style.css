@@ -264,6 +264,7 @@ body {
     .hikeImage {
         border-radius: 3px;
         height: 12vh;
+        width: 150px;
     }
     .Na p, .De p, .re p, .du p, .di p {
         display: none;
@@ -290,6 +291,7 @@ body {
     .hikeImage {
         border-radius: 4px;
         height: 18.8vh;
+        width: 200px;
     }
     .Na p, .De p, .re p, .du p, .di p {
         display: grid;

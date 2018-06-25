@@ -6,7 +6,7 @@
 
 <!-- SEARCH OPTIONS PAGE -->
 {{#unless post}}
-<div class="pageHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/search_hike.jpg');">
+<div class="pageHeader" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/Search_hike.jpg');">
       <div class="pageHeaderContent formFix2">
           <div class="row">
               <div class="col">
@@ -20,6 +20,7 @@
                   <div class="row">
                       <div class="col searchForm form-group">
                           <select class="form-control" id="exampleFormControlSelect1" name="region" placeholder="Select region">
+                              <option>Any region</option>
                               <option>Paris-region</option>
                               <option>Marseille-region</option>
                               <option>Lyon-region</option>
@@ -29,6 +30,7 @@
                       </div>
                       <div class="col searchForm form-group">
                           <select class="form-control" id="exampleFormControlSelect1" name="duration" placeholder="Select time duration">
+                              <option>Any length</option>
                               <option>&lt; 1 hour</option>
                               <option>1-2 hour(s)</option>
                               <option>2-3 hours</option>
@@ -38,6 +40,7 @@
                       </div>
                       <div class="col searchForm form-group">
                           <select class="form-control" id="exampleFormControlSelect1" name="difficulty" placeholder="Select difficulty level">
+                              <option>Any difficulty</option>
                               <option>Easy</option>
                               <option>Medium</option>
                               <option>Hard</option>
@@ -66,7 +69,7 @@
 {{#if post}}
     <div class="srchBkg">
         <div class="newHikes searchBot">
-        <h4>Search Results for the {{region}}, {{duration}} long and {{difficulty}} difficulty</h4>
+        <h4><span class="thinText">Search Results for </span>{{region}}<span class="thinText">,</span> {{duration}}<span class="thinText"> and</span> {{difficulty}}</h4>
         </div>
 
         {{#each hikedata}}

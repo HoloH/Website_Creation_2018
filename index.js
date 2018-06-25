@@ -95,7 +95,7 @@ app.post('/share_hike_form', function (req, res) {
 
 //Add to Mongo
 dbh.collection("hikedata").insertOne({firstName:firstName, lastName:lastName, email:email, hikeName:hikeName, region:region,
-duration:duration, difficulty:difficulty, description:description, photoURL:photoURL}, function(err, respo) {
+duration:duration, difficulty:difficulty, description:description, descripShort:descripShort, photoURL:photoURL}, function(err, respo) {
     if (err) throw err;
     res.render('share_hike_form', {post:true});
     });
@@ -107,9 +107,18 @@ duration:duration, difficulty:difficulty, description:description, photoURL:phot
 //_____________SEARCH_PAGE______________
 app.post('/discover_hike', function (req, res) {
     //Collect search info
-    let region = req.body.region;
-    let duration = req.body.duration;
-    let difficulty = req.body.difficulty;
+    let region = req.body.region; let region2 = req.body.region;
+    let duration = req.body.duration; let duration2 = req.body.duration;
+    let difficulty = req.body.difficulty; let difficulty2 = req.body.difficulty;
+    if (region === "Any region") {
+        region = {$exists: true};
+    }
+    if (duration === "Any length") {
+        duration = {$exists: true};
+    }
+    if (difficulty === "Any difficulty") {
+        difficulty = {$exists: true};
+    }
     //test
     //res.render('discover_hike', {post:true, region:region, duration:duration, difficulty:difficulty});
 
@@ -120,7 +129,7 @@ app.post('/discover_hike', function (req, res) {
             res.render('no_result', {});
         }
     else {
-        res.render('discover_hike', {post:true, region:region, duration:duration, difficulty:difficulty, hikedata:result});
+        res.render('discover_hike', {post:true, region:region2, duration:duration2, difficulty:difficulty2, hikedata:result});
         }
     })
 });
@@ -147,5 +156,5 @@ app.use(function(req, res, next){
 
 
 //________________LISTEN_TO_PORT____________________
-app.listen(3056, () => console.log('TheHikeExchange listening on port 3056!'));
+app.listen(3055, () => console.log('TheHikeExchange listening on port 3055!'));
 });
